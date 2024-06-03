@@ -1,0 +1,8 @@
+- install -
+winget install helix.helix
+
+- configure -
+(Copy Paste config.toml)
+
+- make ra Work -
+rustup component add rust-analyzer
