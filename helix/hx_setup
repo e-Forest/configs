@@ -6,3 +6,14 @@ winget install helix.helix
 
 - make ra Work -
 rustup component add rust-analyzer
+
+- make pylsp Work -
+py -m pip install --user pipx
+cd %AppData%\Roaming\Python\Python312\Scripts
+.\pipx.exe ensurepath
+pipx install python-lsp-server
+cd %AppData%\Roaming\helix\languages.toml
+"[language-server.pylsp.config.pylsp]
+plugins.ruff.enabled = true
+plugins.black.enabled = true"
+-> https://nathanielknight.ca/articles/helix_for_python.html
